@@ -6,11 +6,9 @@
 static pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 
 void * thread() {
-  do {
-    pthread_mutex_lock(&mutex);
-    //critial region
-    pthread_mutex_unlock(&mutex);
-  } while (i);
+  pthread_mutex_lock(&mutex);
+  //critial region
+  pthread_mutex_unlock(&mutex);
 
   //return the sum of the read values
   return NULL;

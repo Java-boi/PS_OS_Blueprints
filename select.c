@@ -16,8 +16,7 @@ int main(int argc, char *argv[]) {
     // wait for change in a file
     int sel_err = select(FD_SETSIZE, &responded_fd, NULL, NULL, NULL);
     if (sel_err == -1) {
-        perror("selection error");
-        exit(EXIT_FAILURE);
+        // selection error
     }
 
     for (int i = 0; i < FD_SETSIZE; i++)

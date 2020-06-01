@@ -17,16 +17,16 @@ void * thread() {
     }
 
     //critial region
-    
+
     pthread_mutex_unlock(&mutex);
-  } while (i);
+  } while (CONDITION);
 
   //return the sum of the read values
   return NULL;
 }
 
 
-int main() {
+int main(int argc, char *argv[]) {
 
   //storage for all threads
   pthread_t open_threads[THREAD_COUNT];

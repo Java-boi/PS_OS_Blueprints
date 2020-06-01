@@ -17,7 +17,7 @@ int main(int argc, char const *argv[]) {
 
 
   //setting the size of the shared memory
-  int trun_err = ftruncate(smfd, SHARED_MEMORY_SIZE)
+  int trun_err = ftruncate(smfd, SHARED_MEMORY_SIZE);
   if (trun_err == -1) {
     // shared memory error
   }

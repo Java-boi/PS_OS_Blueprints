@@ -4,7 +4,8 @@
 
 int main(int argc, char *argv[]) {
 
-  switch (( int pid = fork() )) {
+  int pid;
+  switch (( pid = fork() )) {
     case -1:
       // Fork Error
     case 0:
