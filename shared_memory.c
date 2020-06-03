@@ -1,3 +1,8 @@
+
+/*
+* Compiler flags: -Wall -Werror -Wextra -std=gnu11 -lrt
+*/
+
 #include <stdlib.h>
 #include <unistd.h>
 #include <fcntl.h>

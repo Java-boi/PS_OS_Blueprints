@@ -4,8 +4,7 @@
 
 /* How to compile
     start:
-        gcc -c -Wall -Wextra -Werror -fpic system_allocator.c
-        gcc -shared system_allocator.o -o system_allocator.so
+        gcc -Wall -Wextra -Werror -fpic -shared -std=gnu11 -o system_allocator.so system_allocator.c
         gcc -Wall -Wextra -Werror -std=gnu11 shared_library.c -o shared_library -ldl
 */
 
@@ -16,7 +15,7 @@ void (*my_free)(void *memory);
 int main() {
 
     // load shared library (.so)
-    void *sl_handle = dlopen("./system_allocator.so", RTLD_LAZY);   // RTLD_LAZA means loading funcitons when needed. RTLD_LOCAL... 
+    void *sl_handle = dlopen("./system_allocator.so", RTLD_LAZY);   // RTLD_LAZA means loading funcitons when needed. RTLD_LOCAL...
     if(sl_handle == NULL) {
         printf("Error: Could not load library (%s)\n", dlerror());
         exit(EXIT_FAILURE);
