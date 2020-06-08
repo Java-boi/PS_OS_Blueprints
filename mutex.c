@@ -35,5 +35,8 @@ int main() {
     pthread_join(open_threads[i], NULL);
   }
 
+  //destroy mutex
+  pthread_mutex_destroy(&mutex);
+
   return EXIT_SUCCESS;
 }

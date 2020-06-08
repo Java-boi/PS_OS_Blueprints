@@ -46,5 +46,9 @@ int main(int argc, char *argv[]) {
     pthread_join(open_threads[i], NULL);
   }
 
+  //destroy mutex and conditional
+  pthread_mutex_destroy(&mutex);
+  pthread_cond_destroy(&cond);
+
   return EXIT_SUCCESS;
 }
